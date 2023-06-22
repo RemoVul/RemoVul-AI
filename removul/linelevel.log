@@ -1,0 +1,767 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 140522020036280 on /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008.lock
+DEBUG:filelock:Lock 140522020036280 acquired on /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmp2gizyabk
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 498
+INFO:transformers.file_utils:storing https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json in cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.file_utils:creating metadata file for /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+DEBUG:filelock:Attempting to release lock 140522020036280 on /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008.lock
+DEBUG:filelock:Lock 140522020036280 released on /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008.lock
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 140053472258200 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 140053472258200 acquired on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmpojgfs3to
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 140053472258200 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 140053472258200 released on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 140163207522344 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 140163207522344 acquired on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmp4tthstyq
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 140163207522344 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 140163207522344 released on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139922547984536 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139922547984536 acquired on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmppfxq629e
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 139922547984536 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139922547984536 released on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+INFO:transformers.modeling_utils:loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin from cache at None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+INFO:transformers.modeling_utils:loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin from cache at None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139920999161752 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139920999161752 acquired on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmpk30v1pjf
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 139920999161752 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139920999161752 released on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 139878454200472 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139878454200472 acquired on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.file_utils:https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin not found in cache or force_download set to True, downloading to /home/raghad/.cache/torch/transformers/tmpu7exi2j7
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "GET /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 498627950
+INFO:transformers.file_utils:storing https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin in cache at /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349
+INFO:transformers.file_utils:creating metadata file for /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349
+DEBUG:filelock:Attempting to release lock 139878454200472 on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+DEBUG:filelock:Lock 139878454200472 released on /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349.lock
+INFO:transformers.modeling_utils:loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin from cache at /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/config.json HTTP/1.1" 200 0
+INFO:transformers.configuration_utils:loading configuration file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/config.json from cache at /home/raghad/.cache/torch/transformers/1b62771d5f5169b34713b0af1ab85d80e11f7b1812fbf3ee7d03a866c5f58e72.06eb31f0a63f4e8a136733ccac422f0abf9ffa87c3e61104b57e7075a704d008
+INFO:transformers.configuration_utils:Model config RobertaConfig {
+  "architectures": [
+    "RobertaModel"
+  ],
+  "attention_probs_dropout_prob": 0.1,
+  "bos_token_id": 0,
+  "do_sample": false,
+  "eos_token_id": 2,
+  "eos_token_ids": null,
+  "finetuning_task": null,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "id2label": {
+    "0": "LABEL_0",
+    "1": "LABEL_1"
+  },
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "is_decoder": false,
+  "label2id": {
+    "LABEL_0": 0,
+    "LABEL_1": 1
+  },
+  "layer_norm_eps": 1e-05,
+  "length_penalty": 1.0,
+  "max_length": 20,
+  "max_position_embeddings": 514,
+  "model_type": "roberta",
+  "num_attention_heads": 12,
+  "num_beams": 1,
+  "num_hidden_layers": 12,
+  "num_labels": 2,
+  "num_return_sequences": 1,
+  "output_attentions": false,
+  "output_hidden_states": false,
+  "output_past": true,
+  "pad_token_id": 1,
+  "pruned_heads": {},
+  "repetition_penalty": 1.0,
+  "temperature": 1.0,
+  "top_k": 50,
+  "top_p": 1.0,
+  "torchscript": false,
+  "type_vocab_size": 1,
+  "use_bfloat16": false,
+  "vocab_size": 50265
+}
+
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): s3.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://s3.amazonaws.com:443 "HEAD /models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin HTTP/1.1" 200 0
+INFO:transformers.modeling_utils:loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/microsoft/codebert-base/pytorch_model.bin from cache at /home/raghad/.cache/torch/transformers/3416309b564f60f87c1bc2ce8d8a82bb7c1e825b241c816482f750b48a5cdc26.96251fe4478bac0cff9de8ae3201e5847cee59aebbcafdfe6b2c361f9398b349
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:filelock:Attempting to acquire lock 140102303788280 on /home/raghad/.cache/huggingface/transformers/f5d03310b21357fca0146b028dd11e73204fc363aaf9d8a597441bf84b4bf7ce.c807bbe0e00c0455ed434f796bcc6b64b1b0a0d4f692f5095f3ea4abe955ed1e.lock
+DEBUG:filelock:Lock 140102303788280 acquired on /home/raghad/.cache/huggingface/transformers/f5d03310b21357fca0146b028dd11e73204fc363aaf9d8a597441bf84b4bf7ce.c807bbe0e00c0455ed434f796bcc6b64b1b0a0d4f692f5095f3ea4abe955ed1e.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "GET /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 498
+DEBUG:filelock:Attempting to release lock 140102303788280 on /home/raghad/.cache/huggingface/transformers/f5d03310b21357fca0146b028dd11e73204fc363aaf9d8a597441bf84b4bf7ce.c807bbe0e00c0455ed434f796bcc6b64b1b0a0d4f692f5095f3ea4abe955ed1e.lock
+DEBUG:filelock:Lock 140102303788280 released on /home/raghad/.cache/huggingface/transformers/f5d03310b21357fca0146b028dd11e73204fc363aaf9d8a597441bf84b4bf7ce.c807bbe0e00c0455ed434f796bcc6b64b1b0a0d4f692f5095f3ea4abe955ed1e.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:filelock:Attempting to acquire lock 140102280310736 on /home/raghad/.cache/huggingface/transformers/08477dcecf305af90229876aa01e4b0f3594dc8c638985a72277f39ea7d8d0c3.7fb14267817b1d26bb44a57cd5aa2fc003c25e87b75ef77e9c55c4804675b4cf.lock
+DEBUG:filelock:Lock 140102280310736 acquired on /home/raghad/.cache/huggingface/transformers/08477dcecf305af90229876aa01e4b0f3594dc8c638985a72277f39ea7d8d0c3.7fb14267817b1d26bb44a57cd5aa2fc003c25e87b75ef77e9c55c4804675b4cf.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://cdn-lfs.huggingface.co:443 "GET /microsoft/codebert-base/28b61fd8fa069f6bc966f4cb9572a4026ab2a784fca8fb224020d91b744e32d6?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&Expires=1687578360&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4tbGZzLmh1Z2dpbmdmYWNlLmNvL21pY3Jvc29mdC9jb2RlYmVydC1iYXNlLzI4YjYxZmQ4ZmEwNjlmNmJjOTY2ZjRjYjk1NzJhNDAyNmFiMmE3ODRmY2E4ZmIyMjQwMjBkOTFiNzQ0ZTMyZDY~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qJnJlc3BvbnNlLWNvbnRlbnQtdHlwZT0qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg3NTc4MzYwfX19XX0_&Signature=KBgTGY86YAcn8t82OmivfG9d7QqF7mCwws8PmTGaLYhh3LTKeS5Q74To6~zSwztMdSnesPD94WzIxyDGrD-qKq8mlXZYSRAwBWS8CA7J~GKsCaFShJwVrgKx7SKoHuSUe2oR929imVEfIJp1--edx4ZM3~IAf~HShDVme29ce1IByOoiTVFWOJENqCMDURjidphravXTyrTZzGlT89tGqe5ywexiUtstHlJAT0bLB3U4zgbS2ug5uq0hsrSAN7q39jYLwsUSD8SOwvi-au6RmEzQo55aOPnfARLBjfQbDfN0gqFU4nxJjwSXeOo65qcxmC5~gL4s3G0jVEg9wGhrww__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 498627950
+DEBUG:filelock:Attempting to release lock 140102280310736 on /home/raghad/.cache/huggingface/transformers/08477dcecf305af90229876aa01e4b0f3594dc8c638985a72277f39ea7d8d0c3.7fb14267817b1d26bb44a57cd5aa2fc003c25e87b75ef77e9c55c4804675b4cf.lock
+DEBUG:filelock:Lock 140102280310736 released on /home/raghad/.cache/huggingface/transformers/08477dcecf305af90229876aa01e4b0f3594dc8c638985a72277f39ea7d8d0c3.7fb14267817b1d26bb44a57cd5aa2fc003c25e87b75ef77e9c55c4804675b4cf.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in code.cpp file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [92, 98, 99, 100]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in code.cpp file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in code.cpp file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in code.cpp file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in code.cpp file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug:127.0.0.1 - - [22/Jun/2023 00:03:14] "GET /api/list_numbers?directory=dir HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/tf_model.h5 HTTP/1.1" 302 0
+DEBUG:filelock:Attempting to acquire lock 140189948071888 on /home/raghad/.cache/huggingface/transformers/a3596b9fdf7173fa860f036888d154986002951d89076bbb513485482a16aa09.01315d42bcbf173910b887c89e4d6e28854bf41585473f03f6c25ffc13ba0612.h5.lock
+DEBUG:filelock:Lock 140189948071888 acquired on /home/raghad/.cache/huggingface/transformers/a3596b9fdf7173fa860f036888d154986002951d89076bbb513485482a16aa09.01315d42bcbf173910b887c89e4d6e28854bf41585473f03f6c25ffc13ba0612.h5.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): cdn-lfs.huggingface.co:443
+DEBUG:urllib3.connectionpool:https://cdn-lfs.huggingface.co:443 "GET /microsoft/codebert-base/59cb3355c7c32f42e3d97b0a0dc5b73c944305b9ece419170ec62f78c525d8e0?response-content-disposition=attachment%3B+filename*%3DUTF-8%27%27tf_model.h5%3B+filename%3D%22tf_model.h5%22%3B&Expires=1687707889&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9jZG4tbGZzLmh1Z2dpbmdmYWNlLmNvL21pY3Jvc29mdC9jb2RlYmVydC1iYXNlLzU5Y2IzMzU1YzdjMzJmNDJlM2Q5N2IwYTBkYzViNzNjOTQ0MzA1YjllY2U0MTkxNzBlYzYyZjc4YzUyNWQ4ZTA~cmVzcG9uc2UtY29udGVudC1kaXNwb3NpdGlvbj0qIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjg3NzA3ODg5fX19XX0_&Signature=JtmrgYKNb6ZlvCBtPMacd4fCAUu7msU0M0ibFtuCttlFRZ8zLgk9ADTIU8IdzHfj~bQnVcxyzSTUPk6DDP9P39WfUwYhnhqcTCIre3nWb60n58sYYU-vz0HsVLJJGW15pUvQF1deHVaMwXerKLVPg2ucOsNHYd7ZB4wNDsk~Tlht0xPVwyVLbsmghLHJY0mKo1FCFfkDUY7x8u-Fxmv9MAGiJjC8NBiB6LQDjlykfeprWNmeZRAoTu36hYScvwyEf5kKo~WyuSesjoZFJJaJZM6OqqXvjPVqQmB849kqHezaHgtc-IU-g84Jv~h0oSNGK-d~Wq-RTJ8~H76nVZ2lmg__&Key-Pair-Id=KVTP0A1DKRTAX HTTP/1.1" 200 498845224
+DEBUG:filelock:Attempting to release lock 140189948071888 on /home/raghad/.cache/huggingface/transformers/a3596b9fdf7173fa860f036888d154986002951d89076bbb513485482a16aa09.01315d42bcbf173910b887c89e4d6e28854bf41585473f03f6c25ffc13ba0612.h5.lock
+DEBUG:filelock:Lock 140189948071888 released on /home/raghad/.cache/huggingface/transformers/a3596b9fdf7173fa860f036888d154986002951d89076bbb513485482a16aa09.01315d42bcbf173910b887c89e4d6e28854bf41585473f03f6c25ffc13ba0612.h5.lock
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:root:Vulnerable lines in dir/code.c file: [[14, 11, 13, 12, 15], [39, 42, 37, 43, 40, 47, 38, 48], [69, 65, 67, 68, 66, 71], [89, 95, 96, 97]]

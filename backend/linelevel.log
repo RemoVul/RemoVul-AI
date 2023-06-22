@@ -1,0 +1,21 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 01:54:53] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
