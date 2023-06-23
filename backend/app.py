@@ -2,9 +2,12 @@ import os
 import requests
 from flask import Flask, jsonify, request
 from modelinference import Inferance
+from flask_cors import cross_origin
 import logging
+from flask_cors import CORS
 
 app = Flask(__name__)
+cors = CORS(app)
 
 logging.basicConfig(filename='linelevel.log', level=logging.DEBUG)
 
@@ -36,6 +39,7 @@ def process_files(directory,headers):
     return all_vul_lines     
 
 @app.route('/api/vul_lines', methods=['GET'])
+@cross_origin()
 def vul_lines():
 
     os.environ['GITHUB_ACCESS_TOKEN'] = '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'
@@ -65,6 +69,7 @@ def vul_lines():
 
 # api take file url and return content of file
 @app.route('/api/file_content', methods=['GET'])
+@cross_origin()
 def file_content():
     file_url = request.args.get('file_url')
     file_response = requests.get(file_url)
