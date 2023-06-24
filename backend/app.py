@@ -38,6 +38,18 @@ def process_files(directory,headers):
             all_vul_lines[file_info['name']]=vul_lines
     return all_vul_lines     
 
+def is_dict_empty(d):
+    """
+    Recursively checks if all the objects in a nested dictionary are empty.
+    """
+    for k, v in d.items():
+        if isinstance(v, dict):
+            if not is_dict_empty(v):
+                return False
+        elif v:
+            return False
+    return True
+
 @app.route('/api/vul_lines', methods=['GET'])
 @cross_origin()
 def vul_lines():
@@ -51,7 +63,7 @@ def vul_lines():
 
     # Validate the GitHub link
     if not github_link.startswith('https://github.com/'):
-        return jsonify({'error': 'Invalid GitHub link'})
+        return jsonify({'error': 'Invalid GitHub link'}), 400
 
     # dict to store the name of the file and the vul lines
     #all_vul_lines = {}
@@ -63,8 +75,14 @@ def vul_lines():
     # Process files recursively
     api_url = github_link.replace('https://github.com/', 'https://api.github.com/repos/') + '/contents'
     all_vul_lines=process_files(api_url, headers)
-
-    return jsonify({'vul_lines': all_vul_lines})
+    # if all_vul_lines id null or empty
+    if not all_vul_lines:
+        return jsonify({'error': 'Invalid GitHub link'}), 400
+    
+    if is_dict_empty(all_vul_lines):
+        return jsonify({'error': 'No C/C++ files found'}), 404
+        
+    return jsonify({'vul_lines': all_vul_lines}), 200
 
 
 # api take file url and return content of file
@@ -74,9 +92,9 @@ def file_content():
     file_url = request.args.get('file_url')
     file_response = requests.get(file_url)
     if file_response.status_code == 200:
-        return jsonify({'file_content': file_response.text})
+        return jsonify({'file_content': file_response.text}), 200
     else:
-        return jsonify({'error': 'File not found'})
+        return jsonify({'error': 'File not found'}), 404
     
 
 if __name__ == '__main__':

@@ -3770,3 +3770,773 @@ DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /conikee
 INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 20:59:59] "GET /api/file_content?file_url=https://raw.githubusercontent.com/conikeec/seeve/master/CWE-119/src/test4.c HTTP/1.1" 200 -
 DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /conikeec/seeve/master/CWE-119/src/test4.c HTTP/1.1" 200 636
 INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 21:00:00] "GET /api/file_content?file_url=https://raw.githubusercontent.com/conikeec/seeve/master/CWE-119/src/test4.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5 HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5 HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/FileOpLock.cpp HTTP/1.1" 200 1149
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/FileOpLock.cpp HTTP/1.1" 200 1149
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:43:01] "GET /api/vul_lines?github_link=https://github.com/Wh04m1001/CVE-2023-20178 HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:43:01] "GET /api/vul_lines?github_link=https://github.com/Wh04m1001/CVE-2023-20178 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:43:07] "GET /api/file_content?file_url=https://raw.githubusercontent.com/Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:43:07] "GET /api/file_content?file_url=https://raw.githubusercontent.com/Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5 HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5 HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Wh04m1001/CVE-2023-20178/contents/exploit/Project5
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/FileOpLock.cpp HTTP/1.1" 200 1149
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/FileOpLock.cpp HTTP/1.1" 200 1149
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+INFO:root:Vulnerable lines in FileOpLock.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /Wh04m1001/CVE-2023-20178/main/exploit/Project5/main.cpp HTTP/1.1" 200 3592
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:44:17] "GET /api/vul_lines?github_link=https://github.com/Wh04m1001/CVE-2023-20178 HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [23/Jun/2023 22:44:17] "GET /api/vul_lines?github_link=https://github.com/Wh04m1001/CVE-2023-20178 HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:48:07] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:48:07] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:48:23] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:48:24] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:00] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:01] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:40] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:40] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:47] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:47] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:56] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-co.git/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 14:51:56] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-co.git HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:04:09] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:04:09] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:04:35] "[31m[1mGET /api/vul_lines?github_link=https://gitpub.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:04:35] "[31m[1mGET /api/vul_lines?github_link=https://gitpub.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:06:17] "[31m[1mGET /api/vul_lines?github_link=https://gitub.com/nixrajput/char-counter HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:06:17] "[31m[1mGET /api/vul_lines?github_link=https://gitub.com/nixrajput/char-counter HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:06:32] "[31m[1mGET /api/vul_lines?github_link=https://gitub.com/nixrajput/char HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:06:32] "[31m[1mGET /api/vul_lines?github_link=https://gitub.com/nixrajput/char HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:09:03] "GET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:09:04] "GET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ammarmahmood1999/HeartHealthPrediction/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ammarmahmood1999/HeartHealthPrediction/contents
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:10:49] "[33mGET /api/vul_lines?github_link=https://github.com/ammarmahmood1999/HeartHealthPrediction HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ammarmahmood1999/HeartHealthPrediction/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ammarmahmood1999/HeartHealthPrediction/contents
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:10:49] "[33mGET /api/vul_lines?github_link=https://github.com/ammarmahmood1999/HeartHealthPrediction HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:20:16] "[33mGET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:20:16] "[33mGET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:24:31] "[33mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:24:31] "[33mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:48:24] "[33mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 404 -
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:48:25] "[33mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:50:47] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:50:47] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:51:41] "[33mGET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ayushreal/Signature-recognition/contents/test HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ayushreal/Signature-recognition/contents/test
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:51:41] "[33mGET /api/vul_lines?github_link=https://github.com/ayushreal/Signature-recognition HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv/Scripts HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv/Scripts
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:54:58] "GET /api/vul_lines?github_link=https://github.com/fikrado-orgnasation/python-for-Hackers HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv/Scripts HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv/Scripts
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 15:54:58] "GET /api/vul_lines?github_link=https://github.com/fikrado-orgnasation/python-for-Hackers HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv/Scripts HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv/Scripts
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:08:48] "[33mGET /api/vul_lines?github_link=https://github.com/fikrado-orgnasation/python-for-Hackers HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/fikrado-orgnasation/python-for-Hackers/contents/spam%20bot/venv/Scripts HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/fikrado-orgnasation/python-for-Hackers/contents/spam bot/venv/Scripts
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:08:48] "[33mGET /api/vul_lines?github_link=https://github.com/fikrado-orgnasation/python-for-Hackers HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:09:34] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:09:34] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:10:43] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:10:44] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiar/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:10:48] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiar HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiar/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:10:48] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiar HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:26] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:26] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:33] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:34] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:50] "[31m[1mGET /api/vul_lines?github_link=https://githud.com/abhilampard/Simple HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:11:50] "[31m[1mGET /api/vul_lines?github_link=https://githud.com/abhilampard/Simple HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:13:39] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:13:39] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:13:47] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:13:47] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:14:11] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 79, in vul_lines
+    if is_dict_empty(all_vul_lines):
+  File "app.py", line 45, in is_dict_empty
+    for k, v in d.items():
+AttributeError: 'NoneType' object has no attribute 'items'
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:14:18] "[35m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:14:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:17:55] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:23:27] "[31m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:23:50] "[31m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:23:50] "[31m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:25:28] "GET /api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:25:28] "GET /api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:26:51] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:26:51] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:29:29] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:13] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:16] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:19] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:21] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:25] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:27] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:33] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:30:34] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:32:06] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:32:14] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:32:14] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:32:56] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:33:23] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:33:45] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:33:57] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:33:58] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:17] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:17] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:36] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 404 14
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:44] "[33mGET /api/file_content?file_url=https://raw.githubusercontent.com/naemam/Hotel-Management-System/main/HMSC.c HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 404 14
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:45] "[33mGET /api/file_content?file_url=https://raw.githubusercontent.com/naemam/Hotel-Management-System/main/HMSC.c HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:37:02] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
