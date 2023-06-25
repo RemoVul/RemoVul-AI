@@ -5,6 +5,9 @@ from modelinference import Inferance
 from flask_cors import cross_origin
 import logging
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -54,7 +57,6 @@ def is_dict_empty(d):
 @cross_origin()
 def vul_lines():
 
-    os.environ['GITHUB_ACCESS_TOKEN'] = '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'
 
     github_link = request.args.get('github_link')
 

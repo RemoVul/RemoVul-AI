@@ -5,12 +5,14 @@ from transformers import (WEIGHTS_NAME, get_linear_schedule_with_warmup,
                           RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer)
 import pandas as pd
 import pytorch_lightning as pl
-from linevul import Model,UCC_Data_Module
-from linelevel import LineLevel
-from filevul import Filevul,Directoryvul
+from removul.linevul import Model,UCC_Data_Module
+from removul.linelevel import LineLevel
+from removul.filevul import Filevul,Directoryvul
 import random
 import numpy as np
 import torch
+from dotenv import load_dotenv
+import os
 
 # Set the logging level to ignore warnings
 logging.getLogger("transformers").setLevel(logging.ERROR)
@@ -18,6 +20,11 @@ logging.getLogger("transformers").setLevel(logging.ERROR)
 
 
 logging.basicConfig(filename='linelevel.log', level=logging.DEBUG)
+# Load the environment variables from the .env file
+load_dotenv()
+
+# Get the base directory from the environment variable
+base_dir = os.environ['BASE_DIR']
 
 parser = argparse.ArgumentParser(description='Script so useful.')
 parser.add_argument('--model_name_or_path', type=str, default='microsoft/codebert-base', help='pretrained model name')
@@ -42,8 +49,8 @@ parser.add_argument('--directory_name', type=str, default=None, help='directory 
 parser.add_argument('--num_labels', type=int, default=2, help='number of labels')
 parser.add_argument('--function_column', type=str, default='processed_func', help='function column name')
 parser.add_argument('--target_column', type=str, default='target', help='target column name')
-parser.add_argument('--checkpoint_path', type=str, default="/home/raghad/Desktop/GP/removul/lightning_logs/version_11/checkpoints/epoch=4-step=83840.ckpt", help='checkpoint path')
-parser.add_argument('--hparams_file', type=str, default="/home/raghad/Desktop/GP/removul/lightning_logs/version_11/hparams.yaml", help='hparams file')
+parser.add_argument('--checkpoint_path', type=str, default=f"{base_dir}/removul/lightning_logs/version_11/checkpoints/epoch=4-step=83840.ckpt", help='checkpoint path')
+parser.add_argument('--hparams_file', type=str, default=f"{base_dir}/removul/lightning_logs/version_11/hparams.yaml", help='hparams file')
 # class weight tensor
 parser.add_argument('--class_weight', type=list, default=[0.5307, 8.6371], help='class weight tensor')
 
@@ -64,8 +71,8 @@ def main():
     config.num_labels = args.num_labels
     config.num_attention_heads = 12
 
-    tokenizer = RobertaTokenizer(vocab_file="/home/raghad/Desktop/GP/bpe_tokenizer/bpe_tokenizer-vocab.json",
-                                        merges_file="/home/raghad/Desktop/GP/bpe_tokenizer/bpe_tokenizer-merges.txt")
+    tokenizer = RobertaTokenizer(vocab_file=f"{base_dir}/bpe_tokenizer/bpe_tokenizer-vocab.json",
+                                        merges_file=f"{base_dir}/bpe_tokenizer/bpe_tokenizer-merges.txt")
     set_seed(42)
     checkpoint_path=args.checkpoint_path
     hparams_file=args.hparams_file

@@ -4540,3 +4540,63 @@ INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:36:45] "[33mGET /api/file_content?f
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
 DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
 INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:37:02] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:53:44] "[31m[1mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 16:54:03] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 17:05:49] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 17:30:17] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
+INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 17:59:49] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
