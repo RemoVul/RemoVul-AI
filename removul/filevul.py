@@ -1,5 +1,5 @@
 import re
-from removul.linelevel import summerize_attention,clean_special_token_values,get_all_lines_score
+from removul.linelevel import summerize_attention,remove_special_token_score,get_lines_score
 from removul.linevul import UCC_Dataset
 import torch
 import os
@@ -108,12 +108,12 @@ def predict_vul(model,tokenizer, args,function):
         # this get one tensor that have attention for each token 
         attention=summerize_attention(attentions)    
         # clean att score for <s> and </s>
-        attention=clean_special_token_values(attention) 
+        attention=remove_special_token_score(attention) 
         # attention should be 1D tensor with seq length representing each token's attention value
         # size of both of them is 512
         assert len(all_tokens)==len(attention)
         word_att_scores = list(zip(all_tokens,attention)) #combine_lists(all_tokens, attention)
-        all_lines_score,_=get_all_lines_score(word_att_scores)
+        all_lines_score,_=get_lines_score(word_att_scores)
         ranking = sorted(range(len(all_lines_score)), key=lambda i: all_lines_score[i], reverse=True)
         # if number of lines in function mor than 10 the n get top 10 lines expected the vulnerability to be in them
         if len(ranking)>10:

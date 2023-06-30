@@ -6,6 +6,8 @@ from flask_cors import cross_origin
 import logging
 from flask_cors import CORS
 from dotenv import load_dotenv
+import subprocess
+import json
 
 load_dotenv()
 
@@ -32,6 +34,22 @@ def process_files(directory,headers):
             file_response = requests.get(file_url, headers=headers)
             if file_response.status_code == 200:
                 vul_lines = Inferance(file_response.text, file_info['name'])
+                all_vul_lines[file_info['name']] = {"vul_lines":vul_lines,"file_url":file_url}
+                logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
+        
+        if file_info['type'] == 'file' and (file_info['name'].endswith('.py')):
+            file_url = file_info['download_url']
+            file_response = requests.get(file_url, headers=headers)
+            if file_response.status_code == 200:
+                #vul_lines = Inferance(file_response.text, file_info['name'])
+                result = subprocess.run(["./RemoVul",file_response.text], stdout=subprocess.PIPE)
+                output = result.stdout.decode('utf-8')
+                output = json.loads(output)
+                # loop over all the keys in output and get the vul lines
+                vul_lines=[]
+                for key in output.keys():
+                    if output[key]:
+                        vul_lines.extend(output[key])
                 all_vul_lines[file_info['name']] = {"vul_lines":vul_lines,"file_url":file_url}
                 logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
 

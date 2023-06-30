@@ -4600,3 +4600,629 @@ DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:4
 DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/abhilampard/Simple-Plagiarism-Checker/contents/templates HTTP/1.1" 200 None
 INFO:root:Processing files in https://api.github.com/repos/abhilampard/Simple-Plagiarism-Checker/contents/templates
 INFO:werkzeug:127.0.0.1 - - [24/Jun/2023 17:59:49] "[33mGET /api/vul_lines?github_link=https://github.com/abhilampard/Simple-Plagiarism-Checker HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 16:28:13] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:00:35] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:root:Vulnerable lines in main.cpp file: []
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:00:48] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest/http HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest/http
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/api.c HTTP/1.1" 200 1576
+INFO:root:Vulnerable lines in api.c file: []
+INFO:root:Vulnerable lines in api.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/funcwrappers.c HTTP/1.1" 200 1164
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/http.c HTTP/1.1" 200 675
+INFO:root:Vulnerable lines in http.c file: []
+INFO:root:Vulnerable lines in http.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httprequest.c HTTP/1.1" 200 1208
+INFO:root:Vulnerable lines in httprequest.c file: []
+INFO:root:Vulnerable lines in httprequest.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httpresponse.c HTTP/1.1" 200 1544
+INFO:root:Vulnerable lines in httpresponse.c file: []
+INFO:root:Vulnerable lines in httpresponse.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/stringbuffer.c HTTP/1.1" 200 981
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/utils.c HTTP/1.1" 200 187
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/setup.py HTTP/1.1" 200 515
+INFO:root:Vulnerable lines in setup.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/tests HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/tests
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_get.py HTTP/1.1" 200 581
+INFO:root:Vulnerable lines in test_get.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:root:Vulnerable lines in test_post.py file: [26]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:04:26] "GET /api/vul_lines?github_link=https://github.com/ozansz/fastrequest HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest/http HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest/http
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/api.c HTTP/1.1" 200 1576
+INFO:root:Vulnerable lines in api.c file: []
+INFO:root:Vulnerable lines in api.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/funcwrappers.c HTTP/1.1" 200 1164
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/http.c HTTP/1.1" 200 675
+INFO:root:Vulnerable lines in http.c file: []
+INFO:root:Vulnerable lines in http.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httprequest.c HTTP/1.1" 200 1208
+INFO:root:Vulnerable lines in httprequest.c file: []
+INFO:root:Vulnerable lines in httprequest.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httpresponse.c HTTP/1.1" 200 1544
+INFO:root:Vulnerable lines in httpresponse.c file: []
+INFO:root:Vulnerable lines in httpresponse.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/stringbuffer.c HTTP/1.1" 200 981
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/utils.c HTTP/1.1" 200 187
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/setup.py HTTP/1.1" 200 515
+INFO:root:Vulnerable lines in setup.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/tests HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/tests
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_get.py HTTP/1.1" 200 581
+INFO:root:Vulnerable lines in test_get.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:root:Vulnerable lines in test_post.py file: [26]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:09:27] "GET /api/vul_lines?github_link=https://github.com/ozansz/fastrequest HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest/http HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest/http
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/api.c HTTP/1.1" 200 1576
+INFO:root:Vulnerable lines in api.c file: []
+INFO:root:Vulnerable lines in api.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/funcwrappers.c HTTP/1.1" 200 1164
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/http.c HTTP/1.1" 200 675
+INFO:root:Vulnerable lines in http.c file: []
+INFO:root:Vulnerable lines in http.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httprequest.c HTTP/1.1" 200 1208
+INFO:root:Vulnerable lines in httprequest.c file: []
+INFO:root:Vulnerable lines in httprequest.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httpresponse.c HTTP/1.1" 200 1544
+INFO:root:Vulnerable lines in httpresponse.c file: []
+INFO:root:Vulnerable lines in httpresponse.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:09:33] "GET /api/file_content?file_url=https://raw.githubusercontent.com/ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/stringbuffer.c HTTP/1.1" 200 981
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:09:33] "GET /api/file_content?file_url=https://raw.githubusercontent.com/ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/utils.c HTTP/1.1" 200 187
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/setup.py HTTP/1.1" 200 515
+INFO:root:Vulnerable lines in setup.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/tests HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/tests
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_get.py HTTP/1.1" 200 581
+INFO:root:Vulnerable lines in test_get.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:root:Vulnerable lines in test_post.py file: [26]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:09:43] "GET /api/vul_lines?github_link=https://github.com/ozansz/fastrequest HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/__init__.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest/http HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest/http
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/fastrequest/http HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/fastrequest/http
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/__init__.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/__init__.py HTTP/1.1" 200 0
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in __init__.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/api.c HTTP/1.1" 200 1576
+INFO:root:Vulnerable lines in api.c file: []
+INFO:root:Vulnerable lines in api.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/api.c HTTP/1.1" 200 1576
+INFO:root:Vulnerable lines in api.c file: []
+INFO:root:Vulnerable lines in api.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/funcwrappers.c HTTP/1.1" 200 1164
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/funcwrappers.c HTTP/1.1" 200 1164
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+INFO:root:Vulnerable lines in funcwrappers.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/http.c HTTP/1.1" 200 675
+INFO:root:Vulnerable lines in http.c file: []
+INFO:root:Vulnerable lines in http.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/http.c HTTP/1.1" 200 675
+INFO:root:Vulnerable lines in http.c file: []
+INFO:root:Vulnerable lines in http.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httprequest.c HTTP/1.1" 200 1208
+INFO:root:Vulnerable lines in httprequest.c file: []
+INFO:root:Vulnerable lines in httprequest.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httprequest.c HTTP/1.1" 200 1208
+INFO:root:Vulnerable lines in httprequest.c file: []
+INFO:root:Vulnerable lines in httprequest.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httpresponse.c HTTP/1.1" 200 1544
+INFO:root:Vulnerable lines in httpresponse.c file: []
+INFO:root:Vulnerable lines in httpresponse.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/httpresponse.c HTTP/1.1" 200 1544
+INFO:root:Vulnerable lines in httpresponse.c file: []
+INFO:root:Vulnerable lines in httpresponse.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/stringbuffer.c HTTP/1.1" 200 981
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/stringbuffer.c HTTP/1.1" 200 981
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+INFO:root:Vulnerable lines in stringbuffer.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/utils.c HTTP/1.1" 200 187
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/fastrequest/http/utils.c HTTP/1.1" 200 187
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+INFO:root:Vulnerable lines in utils.c file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/setup.py HTTP/1.1" 200 515
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/setup.py HTTP/1.1" 200 515
+INFO:root:Vulnerable lines in setup.py file: []
+INFO:root:Vulnerable lines in setup.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/tests HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/ozansz/fastrequest/contents/tests HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/tests
+INFO:root:Processing files in https://api.github.com/repos/ozansz/fastrequest/contents/tests
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_get.py HTTP/1.1" 200 581
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_get.py HTTP/1.1" 200 581
+INFO:root:Vulnerable lines in test_get.py file: []
+INFO:root:Vulnerable lines in test_get.py file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /ozansz/fastrequest/master/tests/test_post.py HTTP/1.1" 200 771
+INFO:root:Vulnerable lines in test_post.py file: [26]
+INFO:root:Vulnerable lines in test_post.py file: [26]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:12:00] "GET /api/vul_lines?github_link=https://github.com/ozansz/fastrequest HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:12:00] "GET /api/vul_lines?github_link=https://github.com/ozansz/fastrequest HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:40:20] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:40:25] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:40:28] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:40:28] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:41:10] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:41:10] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:41:13] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:werkzeug:127.0.0.1 - - [25/Jun/2023 17:41:13] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+INFO:root:Vulnerable lines in access-foreign-keys.py file: [8, 10, 12]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+INFO:root:Vulnerable lines in access-request-in-wrong-handler.py file: [8, 13, 18]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in aiopg-sqli.py file: [11, 18, 27, 32, 37, 45, 53, 10, 17, 26, 32, 37, 45, 53, 69, 88, 97, 115, 123, 131]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+INFO:root:Vulnerable lines in csv-writer-injection.py file: [16, 17]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+INFO:root:Vulnerable lines in insecure-hash-algorithms-md5.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+INFO:root:Vulnerable lines in insecure-hash-algorithms.py file: [2]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+INFO:root:Vulnerable lines in mode-without-authentication.py file: [10]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:root:Vulnerable lines in nan-injection.py file: [12, 22, 24, 30, 32, 34, 42, 47, 56]
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:26:42] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:root:Vulnerable lines in tainted-sql-string.py file: [12, 18, 22]
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:26:42] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:26:58] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:26:58] "GET /api/file_content?file_url=https://raw.githubusercontent.com/RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:33:31] "GET /api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System HTTP/1.1" 200 -
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:33:31] "GET /api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:33:42] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:werkzeug:127.0.0.1 - - [26/Jun/2023 14:33:42] "GET /api/file_content?file_url=https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 -

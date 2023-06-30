@@ -10,6 +10,7 @@ function ShowFile() {
   const [vulLines, setVulLines] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [language, setLanguage] = useState("cpp");
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -26,6 +27,15 @@ function ShowFile() {
         setVulLines(vul_lines);
     }
     setIsLoading(true); // Set loading state to true before fetching data
+
+    // check if file url end with .py, to set language to python or cpp or c
+    if (fileUrl.endsWith(".py")) {
+        setLanguage("python");
+    } else if (fileUrl.endsWith(".cpp")) {
+        setLanguage("cpp");
+    } else if (fileUrl.endsWith(".c")) {  
+        setLanguage("c");
+    }
 
     fetch(`http://localhost:5000/api/file_content?file_url=${fileUrl}`)
       .then((response) => {
@@ -60,7 +70,7 @@ function ShowFile() {
       ) : (
         <div className="demo">
           <CopyBlock
-            language="cpp"
+            language={language}
             text={fileContent}
             showLineNumbers={true}
             theme={dracula}
