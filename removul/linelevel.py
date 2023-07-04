@@ -27,7 +27,7 @@ def get_lines_score(word_score_list, verified_flaw_lines=[],separator=["ÄŠ", " Ä
         verified_flaw_lines: list -> list of lists for the line tokens [['token','in', 'flaw','line'],[]]
         example:
         word_scores: [['int', 0.1], ['x', 0.2], ['=', 0.3], ['15', 0.4],['/~/',0.2], ['int', 0.5], ['y', 0.6], ['=', 0.7], ['20', 0.8]]
-        verified_flaw_lines: [['int', 'x', '=', '15']]
+        verified_flaw_lines: ['intx=15']
         return: [0.1+0.2+0.3+0.4, 0.5+0.6+0.7+0.8], [0]
     """
     # word_att_scores -> [[token, att_value], [token, att_value], ...]

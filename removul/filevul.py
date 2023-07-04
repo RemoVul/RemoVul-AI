@@ -47,6 +47,7 @@ def tokenize_c_function(code):
     mapper={}
     for line in code.split('\n'):
         infile_line+=1
+        line = line.strip()
         if (line.startswith('int ') or line.startswith('void ') or line.startswith('char ')) and ';' not in line:
             if in_function:
                 functions.append({'function':'\n'.join(function_lines) , 'mapper':mapper})

@@ -34,7 +34,7 @@ def process_files(directory,headers):
             file_response = requests.get(file_url, headers=headers)
             if file_response.status_code == 200:
                 vul_lines = Inferance(file_response.text, file_info['name'])
-                all_vul_lines[file_info['name']] = {"vul_lines":vul_lines,"file_url":file_url}
+                all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
                 logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
         
         if file_info['type'] == 'file' and (file_info['name'].endswith('.py')):
@@ -50,7 +50,9 @@ def process_files(directory,headers):
                 for key in output.keys():
                     if output[key]:
                         vul_lines.extend(output[key])
-                all_vul_lines[file_info['name']] = {"vul_lines":vul_lines,"file_url":file_url}
+                # check if the file_url c or cpp
+            
+                all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
                 logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
 
         elif file_info['type'] == 'dir':

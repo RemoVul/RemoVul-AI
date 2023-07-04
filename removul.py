@@ -1,8 +1,7 @@
 from __future__ import absolute_import, division, print_function
 import argparse
 import logging
-from transformers import (WEIGHTS_NAME, get_linear_schedule_with_warmup,
-                          RobertaConfig, RobertaForSequenceClassification, RobertaTokenizer)
+from transformers import (RobertaConfig, RobertaTokenizer)
 import pandas as pd
 import pytorch_lightning as pl
 from removul.linevul import Model,UCC_Data_Module
