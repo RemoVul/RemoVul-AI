@@ -5359,3 +5359,839 @@ DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajp
 INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
 INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
 INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 11:23:57] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:12:07] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 110, in vul_lines
+    process_files(api_url, headers,static_analysis,ai_analysis)
+  File "app.py", line 71, in process_files
+    process_files(subdir,headers,static_analysis)
+TypeError: process_files() missing 1 required positional argument: 'ai_analysis'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:29:40] "[35m[1mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:29:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+INFO:root:Vulnerable lines in main.cpp file: {'vul_lines': [18, 17, 23, 28, 36, 37, 34, 38, 12, 15], 'file_url': 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:32:58] "[31m[1mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+INFO:root:Vulnerable lines in main.cpp file: {'vul_lines': [18, 17, 23, 28, 36, 37, 34, 38, 12, 15], 'file_url': 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:33:48] "[31m[1mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 400 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+INFO:root:Vulnerable lines in main.cpp file: {'vul_lines': [18, 17, 23, 28, 36, 37, 34, 38, 12, 15], 'file_url': 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:37:30] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/.github HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/.github
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/.github/workflows HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/.github/workflows
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/css HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/css
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/images HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/images
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/js HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/js
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/Yash-srivastav16/Tour-Project/contents/screenshot HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/Yash-srivastav16/Tour-Project/contents/screenshot
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:38:50] "[33mGET /api/vul_lines?github_link=https://github.com/Yash-srivastav16/Tour-Project HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+INFO:root:Vulnerable lines in main.cpp file: {'vul_lines': [18, 17, 23, 28, 36, 37, 34, 38, 12, 15], 'file_url': 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:39:34] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 112, in vul_lines
+    process_files(api_url, headers,static_analysis,ai_analysis,"")
+  File "app.py", line 73, in process_files
+    process_files(subdir,headers,static_analysis,ai_analysis,path + "/" + file_info['name'])
+  File "app.py", line 49, in process_files
+    logging.info("Vulnerable lines in %s file: %s", file_info['name'], ai_analysis[file_url])
+KeyError: 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:46:30] "[35m[1mGET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:46:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: [[18, 17, 23, 28, 36, 37, 34, 38, 12, 15]]
+INFO:root:Vulnerable lines in main.cpp file: {'vul_lines': [18, 17, 23, 28, 36, 37, 34, 38, 12, 15], 'file_url': 'https://raw.githubusercontent.com/nixrajput/char-counter-cpp/master/src/main.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:49:35] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:50:07] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:50:07] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/docs HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/docs
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/docs/_generate HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/docs/_generate
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/docs/conf.py HTTP/1.1" 200 2294
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/lib HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/lib
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/setup.py HTTP/1.1" 200 1549
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/src/python_cpp_example HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/src/python_cpp_example
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/src/python_cpp_example/__init__.py HTTP/1.1" 200 54
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/src/python_cpp_example/bindings.cpp HTTP/1.1" 200 315
+INFO:root:Vulnerable lines in bindings.cpp file: []
+INFO:root:Vulnerable lines in bindings.cpp file: {'vul_lines': [], 'file_url': 'https://raw.githubusercontent.com/benjaminjack/python_cpp_example/master/src/python_cpp_example/bindings.cpp', 'type_file': 'cpp'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/src/python_cpp_example/hello.py HTTP/1.1" 200 59
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/src/python_cpp_example/math.cpp HTTP/1.1" 200 93
+INFO:root:Vulnerable lines in math.cpp file: [[3, 5, 4, 6], [8, 10, 9, 11]]
+INFO:root:Vulnerable lines in math.cpp file: {'vul_lines': [3, 5, 4, 6, 8, 10, 9, 11], 'file_url': 'https://raw.githubusercontent.com/benjaminjack/python_cpp_example/master/src/python_cpp_example/math.cpp', 'type_file': 'cpp'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/benjaminjack/python_cpp_example/contents/tests HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/benjaminjack/python_cpp_example/contents/tests
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/tests/__init__.py HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/tests/cpp_test.py HTTP/1.1" 200 242
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/tests/math_test.py HTTP/1.1" 200 175
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/tests/test_main.cpp HTTP/1.1" 200 66
+INFO:root:Vulnerable lines in test_main.cpp file: []
+INFO:root:Vulnerable lines in test_main.cpp file: {'vul_lines': [], 'file_url': 'https://raw.githubusercontent.com/benjaminjack/python_cpp_example/master/tests/test_main.cpp', 'type_file': 'cpp'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /benjaminjack/python_cpp_example/master/tests/test_math.cpp HTTP/1.1" 200 128
+INFO:root:Vulnerable lines in test_math.cpp file: []
+INFO:root:Vulnerable lines in test_math.cpp file: {'vul_lines': [], 'file_url': 'https://raw.githubusercontent.com/benjaminjack/python_cpp_example/master/tests/test_math.cpp', 'type_file': 'cpp'}
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:53:55] "GET /api/vul_lines?github_link=https://github.com/benjaminjack/python_cpp_example HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/cpp_module.cpp HTTP/1.1" 200 2007
+INFO:root:Vulnerable lines in cpp_module.cpp file: []
+INFO:root:Vulnerable lines in cpp_module.cpp file: {'vul_lines': [], 'file_url': 'https://raw.githubusercontent.com/yas-sim/python-cpp-extension-sample-code/master/cpp_module.cpp', 'type_file': 'cpp'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents/resources HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents/resources
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/test.py HTTP/1.1" 200 387
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 12:55:09] "GET /api/vul_lines?github_link=https://github.com/yas-sim/python-cpp-extension-sample-code HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/cpp_module.cpp HTTP/1.1" 200 2007
+INFO:root:Vulnerable lines in cpp_module.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents/resources HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents/resources
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/test.py HTTP/1.1" 200 387
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:22:37] "[33mGET /api/vul_lines?github_link=https://github.com/yas-sim/python-cpp-extension-sample-code HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/cpp_module.cpp HTTP/1.1" 200 2007
+INFO:root:Vulnerable lines in cpp_module.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/yas-sim/python-cpp-extension-sample-code/contents/resources HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/yas-sim/python-cpp-extension-sample-code/contents/resources
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /yas-sim/python-cpp-extension-sample-code/master/test.py HTTP/1.1" 200 387
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:26:01] "GET /api/vul_lines?github_link=https://github.com/yas-sim/python-cpp-extension-sample-code HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:53:50] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:54:08] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+ERROR:app:Exception on /api/custom_rule [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 125, in custom_rule
+    with tempfile.NamedTemporaryFile(dir='/tested', prefix='temp_file', suffix='.yaml') as temp_file:
+  File "/usr/lib/python3.6/tempfile.py", line 690, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/usr/lib/python3.6/tempfile.py", line 401, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+FileNotFoundError: [Errno 2] No such file or directory: '/tested/temp_file1xe_xb3u.yaml'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:55:38] "[35m[1mGET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1[0m" 500 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:app:Exception on /api/custom_rule [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 125, in custom_rule
+    with tempfile.NamedTemporaryFile(dir='/tested', prefix='temp_file', suffix='.yaml', delete=False ) as temp_file:
+  File "/usr/lib/python3.6/tempfile.py", line 690, in NamedTemporaryFile
+    (fd, name) = _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+  File "/usr/lib/python3.6/tempfile.py", line 401, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+FileNotFoundError: [Errno 2] No such file or directory: '/tested/temp_filebzr_yelv.yaml'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 13:59:15] "[35m[1mGET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR:app:Exception on /api/custom_rule [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 124, in custom_rule
+    file = open('/tested/custom_rule.py', 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/tested/custom_rule.py'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 14:07:54] "[35m[1mGET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+ERROR:app:Exception on /api/custom_rule [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 163, in custom_rule
+    os.remove('/tested/custom_rule.py')
+FileNotFoundError: [Errno 2] No such file or directory: '/tested/custom_rule.py'
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 14:09:43] "[35m[1mGET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 14:10:31] "GET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 14:11:49] "GET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+ERROR:app:Exception on /api/custom_rule [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 154, in custom_rule
+    process_files(api_url, headers,static_analysis,ai_analysis,"")
+  File "app.py", line 75, in process_files
+    process_files(subdir,headers,static_analysis,ai_analysis,path + "/" + file_info['name'])
+  File "app.py", line 60, in process_files
+    output = json.loads(output)
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 14:12:46] "[35m[1mGET /api/custom_rule?github_link=https://github.com/RemoVul/classical-tests&custom_rule=rules:%20-%20id:%20access-foreign-keys-2%20patterns:%20-%20pattern-either:%20-%20pattern-inside:%20%7C%20from%20django.$Y%20import%20$Z%20...%20-%20pattern-inside:%20%7C%20import%20django%20...%20-%20pattern:%20$X.user.id%20-%20pattern-not:%20request.user.id%20message:%20You%20should%20use%20ITEM.user_id%20rather%20than%20ITEM.user.id%20to%20prevent%20running%20an%20extra%20query.%20languages:%20[python]%20severity:%20WARNING%20metadata:%20category:%20performance%20technology:%20-%20django%20 HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 16:07:25] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 16:09:42] "GET /api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 16:10:39] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 16:18:04] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+ERROR:app:Exception on /api/vul_lines [GET]
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connection.py", line 429, in connect
+    tls_in_tls=tls_in_tls,
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 450, in ssl_wrap_socket
+    sock, context, tls_in_tls, server_hostname=server_hostname
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 799, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 721, in urlopen
+    chunked=chunked,
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 403, in _make_request
+    self._validate_conn(conn)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connectionpool.py", line 1053, in _validate_conn
+    conn.connect()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/connection.py", line 429, in connect
+    tls_in_tls=tls_in_tls,
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 450, in ssl_wrap_socket
+    sock, context, tls_in_tls, server_hostname=server_hostname
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.6/ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/lib/python3.6/ssl.py", line 817, in __init__
+    self.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 1077, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/lib/python3.6/ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+urllib3.exceptions.ProtocolError: ('Connection aborted.', OSError(0, 'Error'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "app.py", line 104, in vul_lines
+    process_files(api_url, headers,static_analysis,ai_analysis,"")
+  File "app.py", line 21, in process_files
+    response = requests.get(directory, headers=headers)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/raghad/Desktop/GP/removul/removul/lib/python3.6/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', OSError(0, 'Error'))
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 20:11:17] "[35m[1mGET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 20:11:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/RemoVul/classical-tests/contents/tested HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/RemoVul/classical-tests/contents/tested
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-foreign-keys.py HTTP/1.1" 200 147
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/access-request-in-wrong-handler.py HTTP/1.1" 200 160
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/aiopg-sqli.py HTTP/1.1" 200 560
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/csv-writer-injection.py HTTP/1.1" 200 308
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms-md5.py HTTP/1.1" 200 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/insecure-hash-algorithms.py HTTP/1.1" 200 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/mode-without-authentication.py HTTP/1.1" 200 272
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/nan-injection.py HTTP/1.1" 200 576
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /RemoVul/classical-tests/main/tested/tainted-sql-string.py HTTP/1.1" 200 434
+INFO:werkzeug:127.0.0.1 - - [04/Jul/2023 20:13:14] "GET /api/vul_lines?github_link=https://github.com/RemoVul/classical-tests HTTP/1.1" 200 -

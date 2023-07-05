@@ -16,7 +16,7 @@ cors = CORS(app)
 
 logging.basicConfig(filename='linelevel.log', level=logging.DEBUG)
 
-def process_files(directory,headers):
+def process_files(directory,headers,static_analysis,ai_analysis,path):
     # Get the repository contents
     response = requests.get(directory, headers=headers)
 
@@ -26,7 +26,17 @@ def process_files(directory,headers):
         return
 
     logging.info("Processing files in %s", directory)
-    all_vul_lines={}
+    # all_vul_lines={}
+    # {
+    #     "SQL_Injection": 
+    #     [
+    #         {
+    #             "file_name": "app.py",
+    #             "vul_lines": [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    #             "file_url":"url"
+    #         },
+    #     ]
+    # }
     # Loop over the repository files and count rows for C/C++ files
     for file_info in response.json():
         if file_info['type'] == 'file' and (file_info['name'].endswith('.c') or file_info['name'].endswith('.cpp')):
@@ -34,8 +44,11 @@ def process_files(directory,headers):
             file_response = requests.get(file_url, headers=headers)
             if file_response.status_code == 200:
                 vul_lines = Inferance(file_response.text, file_info['name'])
-                all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
-                logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
+                filepath = path + "/" + file_info['name']
+                vul_lines = [item for sublist in vul_lines for item in sublist]
+                if vul_lines:
+                    ai_analysis[filepath] = {"vul_lines":vul_lines,"file_url":file_url,"type_file":file_url.split('.')[-1]}
+                    logging.info("Vulnerable lines in %s file: %s", file_info['name'], ai_analysis[filepath])
         
         if file_info['type'] == 'file' and (file_info['name'].endswith('.py')):
             file_url = file_info['download_url']
@@ -45,33 +58,23 @@ def process_files(directory,headers):
                 result = subprocess.run(["./RemoVul",file_response.text], stdout=subprocess.PIPE)
                 output = result.stdout.decode('utf-8')
                 output = json.loads(output)
-                # loop over all the keys in output and get the vul lines
-                vul_lines=[]
+                # loop over all the keys in output and append the vul lines to the static_analysis dictionarys
                 for key in output.keys():
                     if output[key]:
-                        vul_lines.extend(output[key])
+                        if key not in static_analysis:
+                            static_analysis[key] = []
+                        filepath = path + "/" + file_info['name']
+                        static_analysis[key].append({"path": filepath, "vul_lines": output[key],"file_url":file_url,"type_file":file_url.split('.')[-1]})
                 # check if the file_url c or cpp
             
-                all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
-                logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
+                #all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
+                #logging.info("Vulnerable lines in %s file: %s", file_info['name'], vul_lines)
 
         elif file_info['type'] == 'dir':
             subdir = os.path.join(directory, file_info['name'])
-            vul_lines=process_files(subdir,headers)
-            all_vul_lines[file_info['name']]=vul_lines
-    return all_vul_lines     
+            process_files(subdir,headers,static_analysis,ai_analysis,path + "/" + file_info['name'])
 
-def is_dict_empty(d):
-    """
-    Recursively checks if all the objects in a nested dictionary are empty.
-    """
-    for k, v in d.items():
-        if isinstance(v, dict):
-            if not is_dict_empty(v):
-                return False
-        elif v:
-            return False
-    return True
+
 
 @app.route('/api/vul_lines', methods=['GET'])
 @cross_origin()
@@ -96,15 +99,69 @@ def vul_lines():
 
     # Process files recursively
     api_url = github_link.replace('https://github.com/', 'https://api.github.com/repos/') + '/contents'
-    all_vul_lines=process_files(api_url, headers)
+    static_analysis = {}
+    ai_analysis = {}
+    process_files(api_url, headers,static_analysis,ai_analysis,"")
     # if all_vul_lines id null or empty
-    if not all_vul_lines:
-        return jsonify({'error': 'Invalid GitHub link'}), 400
+    # if not static_analysis:
+    #     return jsonify({'error': 'Invalid GitHub link'}), 400
     
-    if is_dict_empty(all_vul_lines):
-        return jsonify({'error': 'No C/C++ files found'}), 404
+    # if not static_analysis and not ai_analysis:
+    #     return jsonify({'error': 'No cpp or c or py vul found'}), 404
         
-    return jsonify({'vul_lines': all_vul_lines}), 200
+    return jsonify({'static_analysis': static_analysis,"ai_analysis":ai_analysis}), 200
+
+@app.route('/api/custom_rule', methods=['GET'])
+@cross_origin()
+def custom_rule():
+
+    # Get the custom rule string from the body of the request
+    custom_rule = request.args.get('custom_rule')
+
+    # Create a temporary file to store the custom rule in the tested directory
+
+    # Create the file first
+    file = open('./tested/custom_rule.yaml', 'w')
+
+    # Write the custom rule to the file
+    file.write(custom_rule)
+
+    # Close the file
+    file.close()
+
+    github_link = request.args.get('github_link')
+
+    # Retrieve the access token from the environment variable
+    access_token = os.environ['GITHUB_ACCESS_TOKEN']
+
+
+
+    # Validate the GitHub link
+    if not github_link.startswith('https://github.com/'):
+        return jsonify({'error': 'Invalid GitHub link'}), 400
+
+    # dict to store the name of the file and the vul lines
+    #all_vul_lines = {}
+
+    headers = {
+        'Authorization': f'token {access_token}'  # Replace YOUR_TOKEN with your personal access token
+    }
+
+    # Process files recursively
+    api_url = github_link.replace('https://github.com/', 'https://api.github.com/repos/') + '/contents'
+    static_analysis = {}
+    ai_analysis = {}
+    process_files(api_url, headers,static_analysis,ai_analysis,"")
+    # if all_vul_lines id null or empty
+    # if not static_analysis:
+    #     return jsonify({'error': 'Invalid GitHub link'}), 400
+    
+    # if not static_analysis and not ai_analysis:
+    #     return jsonify({'error': 'No cpp or c or py vul found'}), 404
+        
+    # Delete the temporary file
+    os.remove('./tested/custom_rule.yaml')
+    return jsonify({'static_analysis': static_analysis,"ai_analysis":ai_analysis}), 200
 
 
 # api take file url and return content of file
