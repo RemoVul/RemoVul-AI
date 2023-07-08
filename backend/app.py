@@ -8,7 +8,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 import subprocess
 import json
-
+import sys
 load_dotenv()
 
 app = Flask(__name__)
@@ -23,20 +23,9 @@ def process_files(directory,headers,static_analysis,ai_analysis,path):
     # Check if the repository exists
     if response.status_code != 200:
         logging.error("response message: %s", response.json()['message'])
-        return
+        return False
 
     logging.info("Processing files in %s", directory)
-    # all_vul_lines={}
-    # {
-    #     "SQL_Injection": 
-    #     [
-    #         {
-    #             "file_name": "app.py",
-    #             "vul_lines": [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    #             "file_url":"url"
-    #         },
-    #     ]
-    # }
     # Loop over the repository files and count rows for C/C++ files
     for file_info in response.json():
         if file_info['type'] == 'file' and (file_info['name'].endswith('.c') or file_info['name'].endswith('.cpp')):
@@ -44,11 +33,11 @@ def process_files(directory,headers,static_analysis,ai_analysis,path):
             file_response = requests.get(file_url, headers=headers)
             if file_response.status_code == 200:
                 vul_lines = Inferance(file_response.text, file_info['name'])
-                filepath = path + "/" + file_info['name']
-                vul_lines = [item for sublist in vul_lines for item in sublist]
+                file_path = path + "/" + file_info['name']
+                #vul_lines = [item for sublist in vul_lines for item in sublist]
                 if vul_lines:
-                    ai_analysis[filepath] = {"vul_lines":vul_lines,"file_url":file_url,"type_file":file_url.split('.')[-1]}
-                    logging.info("Vulnerable lines in %s file: %s", file_info['name'], ai_analysis[filepath])
+                    ai_analysis[file_path] = {"vul_lines":vul_lines,"file_url":file_url,"type_file":file_url.split('.')[-1]}
+                    logging.info("Vulnerable lines in %s file: %s", file_info['name'], ai_analysis[file_path])
         
         if file_info['type'] == 'file' and (file_info['name'].endswith('.py')):
             file_url = file_info['download_url']
@@ -63,8 +52,8 @@ def process_files(directory,headers,static_analysis,ai_analysis,path):
                     if output[key]:
                         if key not in static_analysis:
                             static_analysis[key] = []
-                        filepath = path + "/" + file_info['name']
-                        static_analysis[key].append({"path": filepath, "vul_lines": output[key],"file_url":file_url,"type_file":file_url.split('.')[-1]})
+                        file_path = path + "/" + file_info['name']
+                        static_analysis[key].append({"path": file_path, "vul_lines": output[key],"file_url":file_url,"type_file":file_url.split('.')[-1]})
                 # check if the file_url c or cpp
             
                 #all_vul_lines[file_info['name']] = {"vul_lines":[item for sublist in vul_lines for item in sublist],"file_url":file_url,"type_file":file_url.split('.')[-1]}
@@ -73,6 +62,8 @@ def process_files(directory,headers,static_analysis,ai_analysis,path):
         elif file_info['type'] == 'dir':
             subdir = os.path.join(directory, file_info['name'])
             process_files(subdir,headers,static_analysis,ai_analysis,path + "/" + file_info['name'])
+
+    return True        
 
 
 
@@ -101,7 +92,11 @@ def vul_lines():
     api_url = github_link.replace('https://github.com/', 'https://api.github.com/repos/') + '/contents'
     static_analysis = {}
     ai_analysis = {}
-    process_files(api_url, headers,static_analysis,ai_analysis,"")
+
+    if process_files(api_url, headers,static_analysis,ai_analysis,""):
+        return jsonify({'static_analysis': static_analysis,"ai_analysis":ai_analysis}), 200
+    else:
+        return jsonify({'error': 'Invalid GitHub link'}), 400
     # if all_vul_lines id null or empty
     # if not static_analysis:
     #     return jsonify({'error': 'Invalid GitHub link'}), 400
@@ -109,7 +104,7 @@ def vul_lines():
     # if not static_analysis and not ai_analysis:
     #     return jsonify({'error': 'No cpp or c or py vul found'}), 404
         
-    return jsonify({'static_analysis': static_analysis,"ai_analysis":ai_analysis}), 200
+    
 
 @app.route('/api/custom_rule', methods=['GET'])
 @cross_origin()
@@ -176,12 +171,15 @@ def file_content():
         return jsonify({'error': 'File not found'}), 404
     
 
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
 
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/dev-aniketj/Learn-CPlusPlus
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/nragland37/cpp-projects4
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/conikeec/seeve
+# http://localhost:5000/api/vul_lines?github_link=https://github.com/RemoVul/classical-tests
 # http://localhost:5000/api/file_content?file_url=https://raw.githubusercontent.com/conikeec/seeve/master/CWE-119/src/test4.c

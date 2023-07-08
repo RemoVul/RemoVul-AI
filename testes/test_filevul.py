@@ -7,7 +7,7 @@ load_dotenv()
 # Get the base directory from the environment variable
 base_dir = os.environ['BASE_DIR']
 sys.path.append(base_dir)
-from removul.filevul import get_c_and_cpp_files, read_c_file, tokenize_c_function
+from removul.filevul import get_c_and_cpp_files, read_c_file, tokenize_c_function,is_start_of_function
 
 class TestCFileFunctions(unittest.TestCase):
     def setUp(self):
@@ -79,17 +79,47 @@ class TestCFileFunctions(unittest.TestCase):
         }
         '''
         functions = tokenize_c_function(c_code)
-        expected_functions = [
-            {
-                'function': 'int add(int a, int b) {\nreturn a + b;\n}',
-                'mapper': {1: 4, 2: 5, 3: 6}
-            },
-            {
-                'function': 'int main() {\nint result = add(3, 4);\nprintf("Result: %d", result);\nreturn 0;\n}',
-                'mapper': { 1: 8, 2: 10, 3: 11, 4: 12, 5: 13}
-            }
-        ]
+        expected_functions = [{'function': '        int add(int a, int b) {\n            return a + b;\n        }',
+                                'mapper': {1: 4, 2: 5, 3: 6}},
+                                {'function': '        int main() {\n            int result = add(3, 4);\n            printf("Result: %d", result);\n            return 0;\n        }',
+                                'mapper': {1: 8, 2: 10, 3: 11, 4: 12, 5: 13}}
+                            ]
+
         self.assertEqual(functions, expected_functions)
+
+
+class FunctionStartTestCase(unittest.TestCase):
+    def test_valid_function_start(self):
+        valid_lines = [
+            "int add(int a, int b) {",
+            "void printMessage(const char* message) {",
+            "int* allocateArray(size_t size) {",
+            "struct Vector normalize(Vector v) {",
+            "void func() {",
+            "struct MyStruct* createStruct() {",
+            "void doSomething(int x, int y, float z) {",
+            "void foo(int x, int y = 10) {",
+            "int bar(int x = 5, int y = 10) {",
+            "char* processArgs(int argc, char *argv[]) {",
+            "char* processArgs(int argc, int x=0 ,bool flag = false) {"
+            "char* processArgs(int argc, char *argv, bool flag = false)",
+            "int add(int a, int b) { return a + b; }",
+        ]
+
+        for line in valid_lines:
+            self.assertTrue(is_start_of_function(line), f"Failed for line: {line}")
+
+
+    def test_invalid_function_start(self):
+        invalid_lines = [
+            "int x = 10;",
+            "int x = 10, y = 20;",
+            "char *str = \"Hello World!\";",
+            "char *str = \"Hello World!\"; int x = 10;",
+        ]
+
+        for line in invalid_lines:
+            self.assertFalse(is_start_of_function(line),f"Failed for line: {line}")
 
 if __name__ == '__main__':
     unittest.main()

@@ -3,6 +3,38 @@ from removul.linelevel import summerize_attention,remove_special_token_score,get
 from removul.linevul import UCC_Dataset
 import torch
 import os
+import logging
+logging.basicConfig(filename='linelevel.log', level=logging.DEBUG)
+
+import re
+
+def is_start_of_function(line):
+    """Returns True if the given line is the start of a C or C++ function, False otherwise
+            /
+        ^                            # Start of line
+        \s*(?:struct\s+)[a-z0-9_]+   # return type
+        \s*\**                       # return type can be a pointer
+        \s*([a-z0-9_]+)              # Function name
+        \s*\(                        # Opening parenthesis
+        (
+            (?:struct\s+)            # Maybe we accept a struct?
+            \s*[a-z0-9_]+\**         # Argument type
+            \s*(?:[a-z0-9_]+)        # Argument name
+            \s*,?                    # Comma to separate the arguments
+        )*
+        \s*\)                        # Closing parenthesis
+        \s*{?                        # Maybe a {
+        \s*$                         # End of the line
+        /mi                          # Close our regex and mark as case insensitive
+    """
+    # pattern check line not end with ;
+    line = line.strip()
+    if line.endswith(';'):
+        return False
+    line = line.strip()
+    pattern = r'^\s*(?:struct\s+)?[a-zA-Z0-9_]+\s*\**\s*([a-zA-Z0-9_]+)\s*\((?:(?:struct\s+)?\s*[a-zA-Z0-9_]+\**\s*[a-zA-Z0-9_]+\s*(?:=\s*[^,]+)?\s*,?\s*)*(char\s*\*\s*[a-zA-Z0-9_]+\s*(?:\[\])?(?:=\s*[^,]+)?)?\)\s*{?'
+    return re.match(pattern, line, re.IGNORECASE) is not None
+
 
 def get_c_and_cpp_files(directory_path):
     """ Returns a list of paths to all the C and C++ files in the given directory and its subdirectories """
@@ -47,8 +79,7 @@ def tokenize_c_function(code):
     mapper={}
     for line in code.split('\n'):
         infile_line+=1
-        line = line.strip()
-        if (line.startswith('int ') or line.startswith('void ') or line.startswith('char ')) and ';' not in line:
+        if is_start_of_function(line):
             if in_function:
                 functions.append({'function':'\n'.join(function_lines) , 'mapper':mapper})
                 function_lines = []
@@ -155,6 +186,7 @@ def Textvul(code,model,tokenizer,args):
         output: vul_lines_infile = [[1,3,4,2],[1,3,4,2]] # list of list of lines in each function that are vulnerable
     """
     functions = tokenize_c_function(code)
+    #logging.info(f'number of functions in file {code} is {functions}')
     vul_lines_infile=[]
     for function in functions:
         #print(function['function'])

@@ -1,0 +1,62 @@
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: {'vul_lines': [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]], 'file_url': 'https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c', 'type_file': 'c'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Mana/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/config.json HTTP/1.1" 200 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): huggingface.co:443
+DEBUG:urllib3.connectionpool:https://huggingface.co:443 "HEAD /microsoft/codebert-base/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Management-System/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/naemazam/Hotel-Management-System/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /naemazam/Hotel-Management-System/main/HMSC.c HTTP/1.1" 200 2926
+INFO:root:Vulnerable lines in HMSC.c file: [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]]
+INFO:root:Vulnerable lines in HMSC.c file: {'vul_lines': [[21, 16, 19, 23, 17, 14, 15, 25, 26, 20]], 'file_url': 'https://raw.githubusercontent.com/naemazam/Hotel-Management-System/main/HMSC.c', 'type_file': 'c'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/naemazam/Hotel-Mana/contents HTTP/1.1" 404 None
+ERROR:root:response message: Not Found
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/screenshots HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/screenshots
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.github.com:443
+DEBUG:urllib3.connectionpool:https://api.github.com:443 "GET /repos/nixrajput/char-counter-cpp/contents/src HTTP/1.1" 200 None
+INFO:root:Processing files in https://api.github.com/repos/nixrajput/char-counter-cpp/contents/src
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): raw.githubusercontent.com:443
+DEBUG:urllib3.connectionpool:https://raw.githubusercontent.com:443 "GET /nixrajput/char-counter-cpp/master/src/main.cpp HTTP/1.1" 200 398
+INFO:root:Vulnerable lines in main.cpp file: []
