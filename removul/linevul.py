@@ -15,33 +15,33 @@ from sklearn.metrics import classification_report
 import torch
 import logging
 import torch.nn as nn
-from torch.nn import CrossEntropyLoss
 import re
 from tqdm import tqdm
 from transformers import RobertaForSequenceClassification
 
 logging.basicConfig(filename='linelevel.log', level=logging.DEBUG)
 
-class RobertaClassificationHead(nn.Module):
-    """Head for function-level classification tasks."""
+class Clasificationlayer(nn.Module):
+    """Classification layer for function-level classification."""
     def __init__(self, config):
         super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.linear1 = nn.Linear(config.hidden_size, config.hidden_size)
+        self.activation = nn.Tanh()
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
-        # last dense layer take the hidden size and return prob for each class
-        self.out_proj = nn.Linear(config.hidden_size, config.num_labels)
+        self.linear2 = nn.Linear(config.hidden_size, config.num_labels)
 
-    def forward(self, features, **kwargs):
-        x = features[:, 0, :]  # take <s> token (equiv. to [CLS])
-        x = self.dropout(x)
+    def forward(self, features):
+        # get CLS vector which represent the whole function
+        cls = features[:, 0, :]
+        cls = self.dropout(cls)
         # dense layer
-        x = self.dense(x)
+        cls = self.linear1(cls)
         # tanh activation function
-        x = torch.tanh(x)
-        x = self.dropout(x)
+        cls = self.activation(cls)
+        cls = self.dropout(cls)
         # last dense layer to get the prob for each class
-        x = self.out_proj(x)
-        return x
+        cls = self.out_proj(cls)
+        return cls
     
 class Model(RobertaForSequenceClassification,pl.LightningModule):
     """Model class for function-level classification."""
@@ -51,11 +51,11 @@ class Model(RobertaForSequenceClassification,pl.LightningModule):
         # get the pretrained model
         self.encoder = RobertaForSequenceClassification.from_pretrained(args.model_name_or_path, config=config, ignore_mismatched_sizes=True)  
         self.tokenizer = tokenizer
-        self.classifier = RobertaClassificationHead(config)
+        self.classifier = Clasificationlayer(config)
         self.args = args
     
         
-    def forward(self, input_embed=None, labels=None,attention_mask=None, output_attentions=False, input_ids=None):
+    def forward(self, input_ids=None, labels=None,attention_mask=None, output_attentions=False):
         """ Forward pass for function-level classification. """
 
         if output_attentions:  
@@ -63,31 +63,27 @@ class Model(RobertaForSequenceClassification,pl.LightningModule):
             # get the attention for 12 layer torch.Size([1, 12, 512, 512])
             # each token has the attention with the other 512 token
             attentions = outputs.attentions
-            # get the last hidden state 
-            last_hidden_state = outputs.last_hidden_state
-            # get the prob for each class
-            logits = self.classifier(last_hidden_state)
-            prob = torch.softmax(logits, dim=-1)
+            # give the last hidden state fromthe last transformer layer to the classifier layer to get the prob for each class
+            predictions = self.classifier(outputs.last_hidden_state)
+            prob = torch.softmax(predictions, dim=-1)
             # get the loss if the labels is exist
             if labels is not None:
                 weight = torch.FloatTensor(self.args.class_weight).cuda()
-                loss_fct = CrossEntropyLoss()
-                loss =loss_fct(logits, labels)
+                cross_entropy_function = nn.CrossEntropyLoss()
+                loss =cross_entropy_function(predictions, labels) 
                 return loss, prob, attentions
             else:
                 return prob, attentions
         else:    
             outputs = self.encoder.roberta(input_ids, attention_mask=attention_mask, output_attentions=output_attentions)
-            # get the last hidden state
-            last_hidden_state = outputs.last_hidden_state
-            # get the prob for each class
-            logits = self.classifier(last_hidden_state)
-            prob = torch.softmax(logits, dim=-1)
+            # give the last hidden state fromthe last transformer layer to the classifier layer to get the prob for each class
+            predictions = self.classifier(outputs.last_hidden_state)
+            prob = torch.softmax(predictions, dim=-1)
             # get the loss if the labels is exist
             if labels is not None:
                 weight = torch.FloatTensor(self.args.class_weight).cuda()
-                loss_fct = CrossEntropyLoss()
-                loss =loss_fct(logits, labels) 
+                cross_entropy_function = nn.CrossEntropyLoss()
+                loss =cross_entropy_function(predictions, labels) 
                 return loss, prob
             else:
                 return prob
