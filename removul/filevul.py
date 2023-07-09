@@ -32,7 +32,9 @@ def is_start_of_function(line):
     if line.endswith(';'):
         return False
     line = line.strip()
-    pattern = r'^\s*(?:struct\s+)?[a-zA-Z0-9_]+\s*\**\s*([a-zA-Z0-9_]+)\s*\((?:(?:struct\s+)?\s*[a-zA-Z0-9_]+\**\s*[a-zA-Z0-9_]+\s*(?:=\s*[^,]+)?\s*,?\s*)*(char\s*\*\s*[a-zA-Z0-9_]+\s*(?:\[\])?(?:=\s*[^,]+)?)?\)\s*{?'
+    pattern = r'^\w+\s+\*?\s*\w+\s*\([^)]*\)\s*{?.*'
+    # print("Line: ",line)
+    print(re.match(pattern, line, re.IGNORECASE) is not None)
     return re.match(pattern, line, re.IGNORECASE) is not None
 
 
@@ -79,7 +81,11 @@ def tokenize_c_function(code):
     mapper={}
     for line in code.split('\n'):
         infile_line+=1
+        # remove comment from line this expected to get better line level detaction
+        # in vulnarability in the function
+        line = re.sub(r"/\*.*?\*/|//.*?$", "", line, flags=re.DOTALL)
         if is_start_of_function(line):
+            print("Line: ",line)
             if in_function:
                 functions.append({'function':'\n'.join(function_lines) , 'mapper':mapper})
                 function_lines = []
@@ -124,7 +130,7 @@ def predict_vul(model,tokenizer, args,function):
         input: function = "int main() {\n    printf("Hello World!");\n //comment \n   return 0;\n}"
         output: is_vul = 1
                 ranking = [1,3,4,2]
-    """       
+    """
     ucc_ds= UCC_Dataset(tokenizer, args,function=function)
     idx=0
     input_ids = ucc_ds.__getitem__(idx)['input_ids']
