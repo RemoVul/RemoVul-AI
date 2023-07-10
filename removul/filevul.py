@@ -32,9 +32,7 @@ def is_start_of_function(line):
     if line.endswith(';'):
         return False
     line = line.strip()
-    pattern = r'^\w+\s+\*?\s*\w+\s*\([^)]*\)\s*{?.*'
-    # print("Line: ",line)
-    #print(re.match(pattern, line, re.IGNORECASE) is not None)
+    pattern = r'^\w+(\s*\*|\s+)\s*\w+\s*\([^)]*\)\s*{?.*'
     return re.match(pattern, line, re.IGNORECASE) is not None
 
 

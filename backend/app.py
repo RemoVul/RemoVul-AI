@@ -177,9 +177,10 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0")
 
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/nixrajput/char-counter-cpp
-# http://localhost:5000/api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System
+# * http://localhost:5000/api/vul_lines?github_link=https://github.com/naemazam/Hotel-Management-System 
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/dev-aniketj/Learn-CPlusPlus
-# http://localhost:5000/api/vul_lines?github_link=https://github.com/nragland37/cpp-projects4
+# * http://localhost:5000/api/vul_lines?github_link=https://github.com/nragland37/cpp-projects4
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/conikeec/seeve
 # http://localhost:5000/api/vul_lines?github_link=https://github.com/RemoVul/classical-tests
 # http://localhost:5000/api/file_content?file_url=https://raw.githubusercontent.com/conikeec/seeve/master/CWE-119/src/test4.c
+# http://localhost:5000/api/vul_lines?github_link=https://github.com/snoopysecurity/Vulnerable-Code-Snippets

@@ -22,23 +22,22 @@ class Clasificationlayer(nn.Module):
     """Classification layer for function-level classification."""
     def __init__(self, config):
         super().__init__()
-        self.linear1 = nn.Linear(config.hidden_size, config.hidden_size)
-        self.activation = nn.Tanh()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
-        self.linear2 = nn.Linear(config.hidden_size, config.num_labels)
+        self.out_proj = nn.Linear(config.hidden_size, 2)
 
     def forward(self, features, **kwargs):
          # get CLS vector which represent the whole function
-        cls = features[:, 0, :] 
-        x = self.dropout(cls)
+        x = features[:, 0, :] 
+        x = self.dropout(x)
         # dense layer
-        cls = self.dense(cls)
+        x = self.dense(x)
         # tanh activation function
-        cls = torch.tanh(cls)
-        cls = self.dropout(cls)
+        x = torch.tanh(x)
+        x = self.dropout(x)
         # last dense layer to get the prob for each class
-        cls = self.out_proj(cls)
-        return cls
+        x = self.out_proj(x)
+        return x
 
 class Model(RobertaForSequenceClassification,pl.LightningModule):
     """Model class for function-level classification."""
