@@ -34,7 +34,7 @@ def is_start_of_function(line):
     line = line.strip()
     pattern = r'^\w+\s+\*?\s*\w+\s*\([^)]*\)\s*{?.*'
     # print("Line: ",line)
-    print(re.match(pattern, line, re.IGNORECASE) is not None)
+    #print(re.match(pattern, line, re.IGNORECASE) is not None)
     return re.match(pattern, line, re.IGNORECASE) is not None
 
 
@@ -85,7 +85,6 @@ def tokenize_c_function(code):
         # in vulnarability in the function
         line = re.sub(r"/\*.*?\*/|//.*?$", "", line, flags=re.DOTALL)
         if is_start_of_function(line):
-            print("Line: ",line)
             if in_function:
                 functions.append({'function':'\n'.join(function_lines) , 'mapper':mapper})
                 function_lines = []
@@ -143,6 +142,8 @@ def predict_vul(model,tokenizer, args,function):
     if is_vul:
         ids = input_ids.detach().tolist()
         all_tokens = tokenizer.convert_ids_to_tokens(ids)
+        # remove Ġ from the word
+        all_tokens = [token.replace('Ġ','') for token in all_tokens]
         # this get one tensor that have attention for each token 
         attention=summerize_attention(attentions)    
         # clean att score for <s> and </s>
@@ -173,7 +174,6 @@ def Filevul(filename,model,tokenizer,args):
     for function in functions:
         #print(function['function'])
         is_val,ranking=predict_vul(model,tokenizer,args,function['function'])
-        #print(ranking)
         if is_val:
             vul_lines_infunc=[]
             mapper=function['mapper']
