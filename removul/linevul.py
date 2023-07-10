@@ -22,10 +22,10 @@ class Clasificationlayer(nn.Module):
     """Classification layer for function-level classification."""
     def __init__(self, config):
         super().__init__()
-        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.linear1 = nn.Linear(config.hidden_size, config.hidden_size)
+        self.activation = nn.Tanh()
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
-        # last dense layer take the hidden size and return prob for each class
-        self.out_proj = nn.Linear(config.hidden_size, config.num_labels)
+        self.linear2 = nn.Linear(config.hidden_size, config.num_labels)
 
     def forward(self, features, **kwargs):
          # get CLS vector which represent the whole function
