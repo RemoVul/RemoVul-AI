@@ -2,9 +2,8 @@
 <!-- LOGO -->
 <br />
 <p align="center">
-    <img src="logo/linevul_logo.png" width="200" height="200">
+    <img src="/images/logo.jpeg" width="200" height="200">
   </a>
-  <h3 align="center">RemoVul</h3>
 </p>
 
 ![VulBERTa architecture](/images/BD.png)
@@ -50,16 +49,10 @@ The RemoVul AI architecture follow <a href="https://www.researchgate.net/publica
 | Model | Weighted F1 score | 
 |:----:|:--------:|
 | μVulDeePecker |  0.96 |
-|   Removul AI |  .98 |
+|   Removul AI |  0.98 |
 
 
 ## Line level  Results
-
-| Model | Weighted F1 score | 
-|:----:|:--------:|
-| μVulDeePecker |  0.96 |
-|   Removul AI |  .98 |
-
 
 
 | Model | Top_10_Accuracy | IFA |
@@ -80,6 +73,13 @@ Then, install the python dependencies via the following command:
 ```
 pip install -r requirements.txt
 ```
+
+Then set environment variable
+```
+export GITHUB_ACCESS_TOKEN=
+export BASE_DIR
+```
+BASE_DIR is the dir to GP 
 
 #### Command run for Training 
 ```
